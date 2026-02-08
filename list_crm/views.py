@@ -13,7 +13,7 @@ from .models import Client, Order
 from openai import OpenAI
 from django.conf import settings
 
-# inicijalizacija OpenAI klijenta
+
 client = OpenAI(api_key=settings.OPENAI_API_KEY)
 
 
@@ -84,6 +84,7 @@ def login_view(request):
 def logout_view(request):
     logout(request)
     return redirect("login")
+
 
 
 
